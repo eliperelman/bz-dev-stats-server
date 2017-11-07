@@ -11,7 +11,7 @@ if (module.hot) {
 }
 
 const app = express();
-const port = envs.PORT;
+const port = process.env.PORT || 5090;
 const ldapSubKey = 'ad|Mozilla-LDAP-Dev|';
 const dc = email => `mail=${email},o=com,dc=mozilla`;
 const root = dc('chris@mozilla.com');
