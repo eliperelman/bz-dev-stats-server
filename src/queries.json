@@ -1,0 +1,61 @@
+{
+  "reviews": {
+    "search": {
+      "include_fields": "id,summary,status",
+      "f1": "requestees.login_name",
+      "f2": "flagtypes.name",
+      "o1": "equals",
+      "o2": "substring",
+      "priority": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "resolution": "---",
+      "v2": "review?"
+    }
+  },
+  "reviewsP1": {
+    "search": {
+      "include_fields": "id,summary,status",
+      "f1": "requestees.login_name",
+      "f2": "flagtypes.name",
+      "o1": "equals",
+      "o2": "substring",
+      "priority": "P1",
+      "resolution": "---",
+      "v2": "review?"
+    }
+  },
+  "needinfos": {
+    "search": {
+      "include_fields": "id,summary,status",
+      "f1": "requestees.login_name",
+      "f2": "flagtypes.name",
+      "o1": "equals",
+      "o2": "substring",
+      "priority": [
+        "--",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "resolution": "---",
+      "v2": "needinfo?"
+    }
+  },
+  "needinfosP1": {
+    "search": {
+      "include_fields": "id,summary,status",
+      "f1": "requestees.login_name",
+      "f2": "flagtypes.name",
+      "o1": "equals",
+      "o2": "substring",
+      "priority": "P1",
+      "resolution": "---",
+      "v2": "needinfo?"
+    }
+  }
+}
