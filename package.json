@@ -1,6 +1,10 @@
 {
   "name": "bz-dev-stats-server",
   "private": true,
+  "engines": {
+    "node": "^8.0.0",
+    "yarn": "^1.2.1"
+  },
   "version": "1.0.0",
   "main": "build/index.js",
   "author": "Eli Perelman <eli@eliperelman.com>",
@@ -9,7 +13,7 @@
     "start": "neutrino start",
     "build": "neutrino build",
     "fetch-job": "neutrino build && node build/run-fetch-job.js",
-    "heroku-postbuild": "neutrino build"
+    "heroku-postbuild": "yarn && neutrino build"
   },
   "devDependencies": {
     "neutrino": "^7.3.0",
