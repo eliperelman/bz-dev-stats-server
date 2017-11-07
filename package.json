@@ -13,7 +13,7 @@
     "start": "neutrino start",
     "build": "neutrino build",
     "fetch-job": "neutrino build && node build/run-fetch-job.js",
-    "heroku-postbuild": "yarn && neutrino build"
+    "heroku-postbuild": "neutrino build"
   },
   "devDependencies": {
     "neutrino": "^7.3.0",

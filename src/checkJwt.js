@@ -8,7 +8,6 @@ export default jwt({
     jwksRequestsPerMinute: 5,
     jwksUri: process.env.JWKS_URI
   }),
-  audience: process.env.JWT_AUDIENCE,
   issuer: process.env.JWT_ISSUER,
   algorithms: ['RS256']
 });
