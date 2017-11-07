@@ -2,13 +2,14 @@
   "name": "bz-dev-stats-server",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "author": "Eli Perelman <eli@eliperelman.com>",
   "license": "MIT",
   "scripts": {
     "start": "neutrino start",
     "build": "neutrino build",
-    "fetch-job": "neutrino build && node build/run-fetch-job.js"
+    "fetch-job": "neutrino build && node build/run-fetch-job.js",
+    "heroku-postbuild": "neutrino build"
   },
   "devDependencies": {
     "neutrino": "^7.3.0",
