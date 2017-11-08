@@ -12,14 +12,15 @@ if (module.hot) {
 
 const app = express();
 const port = process.env.PORT || 5090;
-const ldapSubKey = 'ad|Mozilla-LDAP-Dev|';
+const ldapSubKey = 'ad|Mozilla-LDAP|';
 const dc = email => `mail=${email},o=com,dc=mozilla`;
 const root = dc('chris@mozilla.com');
 const graph = buildGraph(phonebook, root);
 
 app.use(cors());
+app.use(checkJwt);
 
-app.get('/stats/:email?', checkJwt, async (request, response) => {
+app.get('/stats/:email?', async (request, response) => {
   const user = `${request.user.sub.replace(ldapSubKey, '')}@mozilla.com`;
   const id = request.params.email ? dc(request.params.email) : dc(user);
 
